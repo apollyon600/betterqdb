@@ -1,30 +1,46 @@
-# hello-express
+# BetterQDB
+Quick.db but with a slight few adjustments.
+Added more functions/methods to fiddle around with.
+Fixed Bugs that quick.db could not offer at the moment.
 
-A server that serves a webpage, its resources, and some data
+|                   Original Makers                  	| Discord Support (600+ Members) 	|   NPM Page  	|
+|:--------------------------------------------------:	|:------------------------------:	|:-----------:	|
+| [Quick.db](https://www.npmjs.com/package/quick.db) 	|[discord.gg/WYH6n6w](discord.gg/WYH6n6w)| Coming Soon 	|
 
-
-## Your Project
-
-On the front-end,
-
-- Edit `views/index.html` to change the content of the webpage
-- `public/client.js` is the javacript that runs when you load the webpage
-- `public/style.css` is the styles for `views/index.html`
-- Drag in `assets`, like images or music, to add them to your project
-
-On the back-end,
-
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
-
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy.
+# Documentation
+*Most functions shown are similar to the original quick.db documentation.*
+*This package just altars everything. Credit to [TrueXPixels](https://discord.gg/plexidev)*
 
 
-## Made by [Glitch](https://glitch.com/)
+```js
+const db = require('betterdqb');
+ 
+// Setting an object into the key "Bob"
+db.set('Bob', { health: 100, mana: 100 })
+// Whole key returns -> { health: 100, mana: 100 }
+ 
+// Pushing an element into an array ( This array does not exist yet )
+db.push('Bob.inventory', 'Apple')
+// Whole key returns -> { health: 100, mana: 100, inventory: ['Apple'] }
+// Bob.inventory returns => ['Apple']
+ 
+// Adding a number to a new field ( This field does not exist yet )
+db.add('Bob.balance', 500)
+// Whole key returns -> { health: 100, mana: 100, inventory: ['Apple'], balance: 500 }
+// Bob.balance returns => 500
+ 
+// Repeating previous examples:
+db.push('Bob.inventory', 'Grape')
+// Whole key returns -> { health: 100, mana: 100, inventory: ['Apple', 'Grape'], balance: 500 }
+// Bob.items returns => ['Apple', 'Grape']
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+db.set('Bob.balance', 1000)
+// Whole key returns -> { health: 100, mana: 100, inventory: ['Apple', 'Grape'], balance: 1000 }
+// Bob.balance returns => 1000
+ 
+// Fetching individual properties
+// Using either .get or .fetch works
 
-Find out more [about Glitch](https://glitch.com/about).
-
-( ᵔ ᴥ ᵔ )
+db.get('Bob.balance') // -> 1000
+db.fetch('Bob.inventory') // ['Sword', 'Watch']
+```
