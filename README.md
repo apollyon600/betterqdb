@@ -5,7 +5,7 @@ Fixed Bugs that quick.db could not offer at the moment.
 
 |                   Original Makers                  	| Discord Support (600+ Members) 	|   NPM Page  	|
 |:--------------------------------------------------:	|:------------------------------:	|:-----------:	|
-| [Quick.db](https://www.npmjs.com/package/quick.db) 	|[discord.gg/WYH6n6w](discord.gg/WYH6n6w)| Coming Soon 	|
+| [Quick.db](https://www.npmjs.com/package/quick.db) 	|[discord.gg/WYH6n6w](https://discord.gg/WYH6n6w)| Coming Soon 	|
 
 # Introduction
 *Most functions shown are similar to the original quick.db documentation.*
@@ -57,7 +57,7 @@ db.fetch('Bob.inventory') // ['Sword', 'Watch']
 - .push(key, element, [options])
 - .set(key, data, [options])
 - .subtract(key, number, [options])
-
+- .startsWith(string, { sort: ".data" });
 
 #### new .table(name) 
 This function creates a new table, allowing you to separate your data while being used exactly the same.
