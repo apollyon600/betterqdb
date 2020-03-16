@@ -1,0 +1,29 @@
+{
+  "name": "betterqdb",
+  "version": "0.0.1",
+  "description": "Quick.db but with a slight few adjustments.",
+  "main": "index.js",
+  "dependencies": {
+    "better-sqlite3": "^5.0.1",
+    "lodash": "4.17.15"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/betterqdb"
+  },
+  "license": "MIT",
+  "keywords": [
+    "database",
+    "storing",
+    "values",
+    "easy",
+    "quick",
+    "sqlite",
+    "sqlite3",
+    "db"
+  ],
+  "author": "Apollyon365",
+  "license": "MIT"
+}
